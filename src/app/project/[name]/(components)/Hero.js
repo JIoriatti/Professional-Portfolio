@@ -21,7 +21,7 @@ export default function Hero({images, project}){
     const controls = useAnimationControls();
     const [media, setMedia] = useState({})
 
-    const heroRef = useRef();
+    // const heroRef = useRef();
     
     //setting arbitrary large init value to keep page hero from loading
     //in at 0
@@ -53,9 +53,7 @@ export default function Hero({images, project}){
     },[])
 
     useEffect(()=>{
-        heroRef.current.onload = function(){
-            controls.start('visible')
-        }
+        controls.start('visible')
     },[])
 
     return (
@@ -81,7 +79,7 @@ export default function Hero({images, project}){
                     <div className={styles.shadow}></div>
                     {/* <img className={styles.placeholder + ' hidden'} src={images[0].src} alt="placeholder" /> */}
                     <motion.img 
-                        ref={heroRef}
+                        // ref={heroRef}
                         className={styles.heroImage}
                         style={{
                             height : !media.matches ? `${screenHeight}px` : `${(9/16)* screenWidth}px`,
