@@ -3,7 +3,6 @@ import styles from './Hero.module.css'
 import { useState, useEffect, useRef } from 'react'
 import { motion, useAnimationControls} from 'framer-motion'
 import Icons from './Icons'
-import { Suspense } from 'react'
 
 const VARIANTS = {
     visible: {
@@ -20,9 +19,6 @@ export default function Hero({images, project}){
     const [runAnimation, setRunAnimation] = useState(false)
     const controls = useAnimationControls();
     const [media, setMedia] = useState({})
-    const [isLoading, setIsLoading] = useState(true);
-
-    const heroRef = useRef();
     
     //setting arbitrary large init value to keep page hero from loading
     //in at 0
@@ -54,15 +50,8 @@ export default function Hero({images, project}){
     },[])
 
     useEffect(()=>{
-        heroRef.current.onload = function(){
-            setIsLoading(false);
-        }
+        controls.start('visible')
     },[])
-    useEffect(()=>{
-        if(!isLoading){
-            controls.start('visible')
-        }
-    },[isLoading])
 
     return (
         <div 
@@ -87,7 +76,6 @@ export default function Hero({images, project}){
                     <div className={styles.shadow}></div>
                     {/* <img className={styles.placeholder + ' hidden'} src={images[0].src} alt="placeholder" /> */}
                     <motion.img 
-                        ref={heroRef}
                         className={styles.heroImage}
                         style={{
                             height : !media.matches ? `${screenHeight}px` : `${(9/16)* screenWidth}px`,
@@ -112,8 +100,7 @@ export default function Hero({images, project}){
                                 setCurrentImage(images[0].src);
                                 setIndex(0);
                             }
-                            // controls.start('visible')
-                            setIsLoading(true);
+                            controls.start('visible')
                         }}
                     >
                     </motion.img>
