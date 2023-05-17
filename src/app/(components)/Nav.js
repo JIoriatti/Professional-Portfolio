@@ -73,7 +73,6 @@ export default function Nav({navlist}){
                 seperator.style.opacity = 0;
             }
         })
-        console.log(path)
     },[path])
 
     return (

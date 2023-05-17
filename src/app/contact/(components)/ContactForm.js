@@ -30,7 +30,7 @@ export default function ContactForm() {
                 }
             }).catch((error) => {
                 handleError();
-                console.log(error);
+                throw new Error(error);
             });
     };
 

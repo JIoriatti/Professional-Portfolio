@@ -19,7 +19,6 @@ export default function Arrow({
         if(e.target.dataset.id === '0'){
             clickId.current = 0
             trackRef.current.style.transform = `translate3d(${trackRefWidth}px, 0, 0)`
-            console.log(trackRefWidth)
         }
         if(e.target.dataset.id === '1'){
             clickId.current = 1

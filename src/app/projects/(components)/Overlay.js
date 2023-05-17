@@ -59,7 +59,6 @@ export default function Overlay({ project, font, screenWidth, displayHeight }) {
                 aria-hidden={true}
                 initial={false}
                 onTransitionEnd={(e)=>{
-                    console.log('transition ended')
                     if(isCarouselHovered){
                         setIsExpanded(true)
                     }
