@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7em;
+    padding: 4em;
+}
+.header{
+    font-size: 40px;
+    color: var(--themeColor);
+}
+.divider{
+    width: 80%;
+    height: 1px;
+    background-color: var(--divider);
+    margin: 2em 0 2em 0;
+}
+.text{
+    color: var(--themeColorAlt);
+    font-size: 16px;
+}
+@media(max-width: 1035px){
+    .container{
+        padding: 4em 2em 0 2em;
+    }
+}
+@media(max-width: 475px){
+    .container{
+        padding: 4em 0.5em 0 0.5em;
+    }
+    .text{
+        font-size: 16px;
+    }
+}

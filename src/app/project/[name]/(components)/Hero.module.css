@@ -1,0 +1,43 @@
+.container{
+    /* position: relative; */
+    height: max-content;
+    width: 100%;
+    background-color: var(--heroBackground);
+}
+.title{
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    height: max-content;
+    width: 100%;
+    font-size: calc(7vw);
+    left: 0.5em;
+    bottom: 0.5em;
+    color: var(--titleColor);
+    filter: var(--titleFilter);
+    z-index: 2;
+}
+.shadow{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: var(--shadowBackground);
+    z-index: 1;
+}
+.heroWrapper{
+    position: relative;
+    width: 100%;
+    height: max-content;
+}
+
+.heroImage{
+    padding: absolute;
+}
+
+@media(max-width: 735px){
+    .title{
+        bottom: 0.75em;
+    }
+}

@@ -1,0 +1,112 @@
+.main{
+    display: flex;
+    height: 100svh;
+    align-items: center;
+    padding: 0 5em 0 5em;
+    background-color: var(--themeBgAccent);
+}
+.container{
+    display: flex;
+    width: 100%;
+    /* padding: 0 15em 0 15em; */
+    justify-content: space-around;
+}
+.contactContainer,.socialsContainer{
+    width: 30%;
+}
+.contactContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    min-width: 500px;
+}
+.dividerContainer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.divider{
+    position: absolute;
+    height: 80%;
+    width: 1px;
+    background-color: var(--divider);
+}
+.dividerText{
+    position: relative;
+    height: max-content;
+    color: var(--themeColorAlt);
+    background-color: var(--themeBgAccent);
+    /* font-weight: 500; */
+    font-size: 25px;
+}
+.text{
+    color: var(--themeColorAlt);
+    max-width: 90%;
+}
+.socialsContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.linkedInWrapper{
+    position: relative;
+    align-self: center;
+}
+.absolute{
+    position: absolute;
+    top: 0;
+}
+.svg{
+    height: 100%;
+    width: 100%;
+    max-width: 150px;
+}
+.socialName{
+    position: absolute;
+    bottom: -10px;
+    font-weight: 700;
+    color: var(--themeAccent);
+
+}
+@media(max-width: 1035px){
+    .main{
+        height: fit-content;
+        padding: 5em;
+    }
+    .container{
+        flex-direction: column;
+        gap: 10svh;
+    }
+    .contactContainer,.socialsContainer{
+        align-self: center;
+    }
+    .socialsContainer{
+        min-width: 600px;
+        min-height: 300px;
+    }
+    .divider{
+        height: 1px;
+        width: 100%;
+    }
+    .dividerText{
+        padding: 0 10px 0 10px;
+    }
+}
+@media(max-width: 575px){
+    .contactContainer{
+        min-width: 100%;
+        gap: 20px;
+    }
+    .main{
+        padding: 5em 2em 5em 2em;
+    }
+}
+@media(max-width: 375px){
+    .main{
+        padding: 5em 1em 5em 1em;
+    }
+}

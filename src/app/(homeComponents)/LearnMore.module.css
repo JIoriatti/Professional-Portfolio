@@ -1,0 +1,36 @@
+.container{
+    margin-top: 20px;
+}
+.more{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--themeAccentTwo);
+    cursor: pointer;
+
+    transition: 0.2s ease-in-out;
+}
+.more::before,.more::after{
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    height: 4px;
+    width: 8px;
+    rotate: 135deg;
+    right: 52%;
+    top: 35px;
+    background-color: var(--themeAccentTwo);
+    
+    transition: 0.2s ease-in-out;
+}
+.more::after{
+    rotate: 225deg;
+    right: 55%;
+}
+.more:hover{
+    color: var(--themeColor);
+}
+.more:hover::after,.more:hover::before{
+    background-color: var(--themeColor);
+    top: 40px;
+}

@@ -1,0 +1,65 @@
+.dropDown{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 51px;
+    display: flex;
+    height: max-content;
+    width: 100%;
+    padding: 1em;
+    /* background-color: var(--themeBgSlightTransparent); */
+    background-color: var(--themeBg);
+
+    /* border-radius: 5px; */
+    padding: 2em 3em 2em 3em;
+    box-shadow: 1px 3px 0 0 var(--themeBoxShadow);
+}
+.navList{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+    list-style: none;
+}
+.listItem{
+    all: unset;
+    color: var(--themeColor);
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+
+    transition: 0.1s ease-in-out;
+}
+.contact{
+    color: var(--contactColor) !important;
+    background-color: var(--themeAccent);
+    padding: 3px 15px 3px 15px;
+    border-radius: 2px;
+    letter-spacing: 5px;
+    transition: 0.1s ease-in-out;
+}
+.contact:hover{
+    background-color: var(--themeButtonHover);
+}
+.contact:focus-visible{
+    outline: 3px solid var(--themeColorAlt);
+}
+/* .seperator{
+    display: block;
+    height: 1px;
+    width: 90%;
+    background-color: var(--themeAccent);
+} */
+/* @media(prefers-color-scheme: dark){
+    .contact{
+        color: var(--themeColor) !important;
+    }
+} */
+@media(max-width: 375px){
+    .dropDown{
+        padding: 2em;
+    }
+}

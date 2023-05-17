@@ -1,0 +1,120 @@
+.container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--themeBg);
+    /* padding: 1em; */
+    border-radius: 5px;
+    box-shadow: 6px 6px 8px -6px var(--themeBoxShadow);
+    overflow: hidden;
+}
+.container:hover{
+    box-shadow: var(--buttonBoxShadowHover);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    background-color: var(--themeBg);
+    padding: 1em;
+    align-items: center;
+    box-shadow: 
+    inset 0px 8px 10px -10px var(--themeBoxShadow),
+    inset 0px -8px 10px -10px var(--themeBoxShadow),
+    inset 8px 0px 10px -10px var(--themeBoxShadow),
+    inset -8px 0px 10px -10px var(--themeBoxShadow);
+    border-radius: 2px;
+}
+.nameWrapper,.messageWrapper,.companyWrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: max-content;
+}
+.nameWrapper,.emailWrapper,.messageWrapper,.companyWrapper{
+    margin: 1em 0 1em 0;
+}
+.nameLabelWrapper,.emailWrapper,.messageWrapper,.companyWrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.messageWrapper{
+    flex-grow: 1;
+    height: 150px;
+    max-height: 150px;
+}
+.forLast{
+    align-items: flex-end;
+}
+.firstLabel,.lastLabel,.emailLabel,.messageLabel,.companyLabel{
+    position: absolute;
+    top: -9px;
+    left: 10px;
+    padding: 0 5px 0 5px;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 1;
+    color: var(--themeColor);
+    background-color:var(--themeBg);
+}
+.lastLabel{
+    align-self: flex-start;
+    left: 20px;
+}
+.firstName,.lastName,.email,.message,.company{
+    border: unset;
+    outline: unset;
+    outline: 1px solid var(--themeContactOutline);
+    padding-top: 10px;
+    color: var(--themeColor);
+    height: 40px;
+    font-size: 15px;
+    background-color: var(--themeBg);
+    padding-left: 10px;
+    width: 95%;
+    border-radius: 3px;
+    /* border: 1px solid var(--themeAccent); */
+    box-shadow: 4px 4px 10px -4px var(--themeBoxShadow);
+}
+.firstName:focus,.lastName:focus,.email:focus,.message:focus,.company:focus{
+    outline: unset;
+    outline: 3px solid var(--themeOutline);
+    /* border: 1px solid var(--themeOutline); */
+}
+.emailWrapper,.email,.message,.company{
+    width: 100%;
+}
+.message{
+    padding-top: 20px;
+    max-width: 100%;
+    min-width: 100%;
+    /* max-height: 150px; */
+    height: 100%;
+    min-height: 50px;
+}
+
+.send{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    padding: 6px 15px 6px 15px;
+    text-align: center;
+    background-color: var(--themeAccent);
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 5px;
+
+    transition: 0.1s ease-in-out;
+    transition-delay: box-shadow 0.1s;
+}
+.send:hover{
+    background-color: var(--themeButtonHover);
+    box-shadow: 6px 6px 15px -8px var(--themeBoxShadow);
+    transform: translate(-1px, -1px);
+}

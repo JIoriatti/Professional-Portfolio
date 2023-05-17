@@ -1,0 +1,368 @@
+[
+    {
+        "name": "Aria",
+        "href": "https://github.com/JIoriatti/Aria",
+        "deployedHref" : "https://aria-1e44.vercel.app/",
+        "images": [
+            {
+                "src": "/A1.jpg"
+            },
+            {
+                "src": "/A2.jpg"
+            },
+            {
+                "src": "/A3.jpg"
+            },
+            {
+                "src": "/A4.jpg"
+            },
+            {
+                "src": "/A5.jpg"
+            },
+            {
+                "src": "/A6.jpg"
+            }
+        ],
+        "hero": [
+            {
+                "src": "/Aria1-min.jpg"
+            },
+            {
+                "src": "/Aria2-min.jpg"
+            },
+            {
+                "src" : "/AriaBackground.jpg"
+            },
+            {
+                "src": "/Aria3-min.jpg"
+            },
+            {
+                "src": "/Aria4-min.jpg"
+            },
+            {
+                "src": "/Aria5-min.jpg"
+            },
+            {
+                "src": "/Aria6-min.jpg"
+            }
+        ],
+        "mobile":[
+            {
+                "src": "AriaMobile1-min.jpg"
+            },
+            {
+                "src": "AriaMobile1-min.jpg"
+            }
+        ],
+        "built_with" : [
+            {
+                "name":"Next.js 13", 
+                "src": "/nextjs.png",
+                "dark": true,
+                "small": true
+            },
+            {
+                "name":"MongoDB Atlas", 
+                "src": "/mongo.png",
+                "small": true
+            },
+            {
+                "name":"Framer Motion", 
+                "src": "/framer.png",
+                "dark": true
+            },
+            {
+                "name":"Prisma", 
+                "src": "/prisma.png",
+                "dark": true
+            }, 
+            {
+                "name":"Spotify Web API", 
+                "src": "/spotify.png"
+            }
+            
+        ],
+        "features": [
+            {
+                "Spotify Web API" : "Aria utilizes Spotify's Web API to provide users access to content and streaming services from Spotify. After searching for an artist, the user is presented with top tracks, albums and singles of that artist. Users can listen to 30 second previews of all content presented, and in future iterations will be able to log in with their Spotify Premium account to listen to full-length tracks.",
+                "image" : "/spotifyAPI.jpg"
+            },
+            {
+                "Database Integration" : "Aria uses Prisma ORM and MongoDB to persist all users' listened-to tracks and artists, as well as favorited tracks. Future development may include a rating system in which all users' ratings will be aggregated to display the highest rated songs of each genre.",
+                "image" : "/DBIcon.png",
+                "scale_down" : true
+            },
+            {
+                "History, Recent Artists, and Favorites" : "Users can quickly play, pause, favorite, or unfavorite their 20 most-recently listened to tracks in the sidebar without having to redirect to another page, or leave the artist page they're currently browsing. Likewise, a user's most-recently veiwed artists as well as favorited tracks will all be accessible in the same manner. Stay tuned.",
+                "image" : "/AriaSideBar.jpg"
+            },
+            {
+                "Google OAuth" : "Aria includes Google OAuth integration with NextJs to allow users to create an account and sign in with their gmail account for quick and easy account creation/log in.",
+                "image" : "/AriaOAuth2.png",
+                "pad" : true
+            },
+            {
+                "Dynamic Color" : "When a user interacts with a song, the background of the song display will change colors to that of the songs artwork." ,
+                "image" : "/AriaBackground.jpg"
+            }
+        ],
+        "brief" : "A music application built with Next.js 13 that leverages the Spotify Web API to bring a Netlix-inspired listening experience to users.",
+        "description": "Aria is a music application built with Next.js 13. It utilizes the Spotify Web API to access and request data from Spotify's databases. Users are able to search their favorite artists and listen to 30 second previews of every song available on Spotify. Aria also uses Google OAuth to allow users to sign in with their G-Mail accounts. If a user is signed in, they can add songs to their favorites list, and all previously listened-to songs will be added to their history. Aria's UI was inspired by Netflix and Youtube. Future development will include Spotify Premium users having access to full-length tracks thanks to Spotify's audio-playback SDK (Softwear-Development-Kit).",
+        "under_development" : true,
+        "deployed": false
+    },
+    {
+        "name": "Deck Builder V2",
+        "href" : "https://github.com/JIoriatti/Deck-Builder-V2",
+        "deployedHref" : "https://deck-builder-v2.vercel.app/",
+        "images": [
+            {
+                "src": "/DB2.jpg"                
+            },
+            {
+                "src": "/DB5.jpg"
+            },
+            {
+                "src": "/DB3.jpg"
+            },
+            {
+                "src": "/DB4.jpg"
+            },
+            {
+                "src": "/DB1.jpg"                
+            }
+            
+        ],
+        "hero" : [
+            {
+                "src": "/db2-min.jpg"
+            },
+            {
+                "src": "/db1-min.jpg"
+            },
+            {
+                "src": "/db5-min.jpg"
+            },
+            {
+                "src": "/db3-min.jpg"
+            },
+            {
+                "src": "/db4-min.jpg"
+            }
+        ],
+        "mobile":[
+            {
+                "src": "AriaMobile1-min.jpg"
+            }
+        ],
+        "built_with" : [
+            {
+                "name":"Next.js 13", 
+                "src": "/nextjs.png",
+                "dark": true,
+                "small": true
+            },
+            {
+                "name":"MongoDB Atlas", 
+                "src": "/mongo.png",
+                "small": true
+            },
+            {
+                "name":"Framer Motion", 
+                "src": "/framer.png",
+                "dark": true
+            },
+            {
+                "name":"Prisma", 
+                "src": "/prisma.png",
+                "dark": true
+            }
+        ],
+        "features": [
+            {
+                "Scryfall API" : "Deckbuilder leverages the Scryfall REST API to access the entire MTG (Magic The Gathering) catalog to give users the ability to search for any card as well as provide meta data for each card."
+            },
+            {
+                "Deck Creation" : "Once users are signed in with their Gmail accounts, they can begin creating decks and adding cards to each deck. Data is persisted using MongoDB and Prisma ORM."
+            },
+            {
+                "History" : "All recently viewed cards will display in the bottom bar for quick access and reference to previously viewed cards without having to re-search or load a new page. Once clicked, the card will display on the sidebar."
+            },
+            {
+                "Search" : "Users can search not just by card name, but by set name, mana cost, type, power, or any other property they wish to filter by."
+            },
+            {
+                "Card Display" : "Deck Builder displays up to one hundred cards at a time, allowing users to quickly recognize the cards they are interested in without having to scroll through a page of card names."
+            }
+        ],
+        "brief": "A re-inspired take on my first group project of the Northwestern Full Stack Bootcamp built with Next.js 12.",
+        "description": "",
+        "under_development" : true,
+        "deployed": false
+    },
+    {
+        "name": "Time Well Spent",
+        "href": "https://github.com/TotallyReactingNodeTurtles/timewellspent",
+        "deployedHref" : "http://www.time-well-spent.com/",
+        "images": [
+            {
+                "src": "/TWS4.jpg"                
+            },
+            {
+                "src": "/TWS1.jpg"
+            },
+            {
+                "src": "/TWS10.jpg"
+            },
+           
+            {
+                "src": "/TWS11.jpg"
+            },
+            {
+                "src": "/TWS12.jpg"
+            },
+            {
+                "src": "/TWS13.jpg"
+            }
+        ],
+        "hero": [
+            {
+                "src": "/tws4-hero.jpg"
+                
+            },
+            {
+                "src": "/tws7-hero.jpg"
+            },
+            {
+                "src": "/tws3-hero.jpg"
+            },
+           
+            {
+                "src": "/tws8-hero.jpg"
+            },
+            {
+                "src": "/tws9-hero.jpg"
+            },
+            {
+                "src": "/tws10-hero.jpg"
+            }
+        ],
+        "mobile":[
+            {
+                "src": "AriaMobile1-min.jpg"
+            }
+        ],
+        "built_with" : [
+            {
+                "name": "React",
+                "src" : "/react.png"
+            },
+            {
+                "name" : "Tailwind",
+                "src" : "/tailwind.png"
+            },
+            {
+                "name" : "GraphQL",
+                "src" : "/graphql.png"
+            },
+            {
+                "name" : "Mongoose ODM",
+                "src" : "/mongoose.png"
+            },
+            {
+                "name":"MongoDB", 
+                "src": "/mongo.png",
+                "small": true
+            }
+        ],
+        "features": [
+            {
+                "Charity & Donor Profiles" : "Charities and donors can make profiles in order to create and host events or sign up for events, respectively. Profile pages display relevant information about the charities or donor including contact information and a description. All events either hosted or signed up for display on the profile page as well."
+            },
+            {
+                "Google Maps & One-Tap" : "Time Well Spent uses Google One-Tap to allow users to sign up and sign in with one click. Also, users can search any city or zip code and the nearest charities will display on a Google Map."
+            },
+            {
+                "Event Creation" : "Charities can create events quickly and easily by including a title, description, and optional image."
+            },
+            {
+                "Event Search" : "Users can search for events by name or hosting charity name, where information on each event will be displayed in card format."
+            }
+        ],
+        "brief" : "The third and final group project of the Northwestern Full Stack Bootcamp, Time Well Spent is a platform designed to help donors and charities connect.",
+        "description" : "",
+        "under_development" : false,
+        "deployed": true
+    },
+    {
+        "name" : "Deck Builder V1",
+        "href" : "https://github.com/MtgGroupProject/DeckBuilders",
+        "deployedHref" : "https://mtggroupproject.github.io/DeckBuilders/",
+        "images" : [
+            {
+                "src" : "/MTG1-min.jpg"
+            },
+            {
+                "src" : "/MTG2-min.jpg"
+            },
+            {
+                "src" : "/MTG3-min.jpg"
+            },
+            {
+                "src" : "/MTG4-min.jpg"
+            },
+            {
+                "src" : "/MTG5-min.jpg"
+            }
+        ],
+        "hero" : [
+            {
+                "src" : "/MTG1-min.jpg"
+            },
+            {
+                "src" : "/MTG2-min.jpg"
+            },
+            {
+                "src" : "/MTG3-min.jpg"
+            },
+            {
+                "src" : "/MTG4-min.jpg"
+            },
+            {
+                "src" : "/MTG5-min.jpg"
+            }
+        ],
+        "built_with" : [
+            {
+                "name" : "HTML",
+                "src" : "/html.png"
+            },
+            {
+                "name" : "JavaScript",
+                "src" : "/js.png"
+            },
+            {
+                "name" : "CSS",
+                "src" : "/css.png"
+            }
+        ],
+        "features" : [
+            {
+                "Expansive Search" : "Users are able to search for any and every card in the Magic The Gathering catalog. Users can filter by color or CMC (converted mana cost), and order their results by alphabet, price, power, and more."
+            },
+            {
+                "Card Display" : "Selected cards will display the cards image along with relevant information such as mana costs, power, type, and prices. Users can use the provided MTG retail links to access more detailed pricing and market information."
+            },
+            {
+                "Deck Creation" : "Users can create decks and add cards to each deck. Aggregated deck information, such as average converted mana cost, displays on the deck information page."
+            },
+            {
+                "History" : "Recently selected cards will display along the bottom bar for quick access to previously viewed cards. Once selected, the card will once again be displayed as it was when first selected."
+            }
+        ],
+        "brief" : "The OG Deck Builder application. It was the first group project of the Northwestern Full Stack Bootcamp - an application to build, compare, and test out new Magic The Gathering deck builds.",
+        "description": "",
+        "under_development" : false,
+        "deployed" : true
+    }
+]

@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    position: absolute;
+    right: 350px;
+    width: 30px;
+    height: 15px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: var(--themeAccent);
+}
+.mobile{
+    position: relative;
+    order: 1;
+    align-self: flex-end;
+}
+.toggle{
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    left: 0;
+    bottom: -1px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 2px 0 rgb(207, 207, 207), 0px 0px 5px -2px rgb(30, 30, 30);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    background-color: var(--toggleButton);
+    z-index: 1;
+    transition: 0.2s ease;
+}
+/* moving toggle so it doesnt overlap with title */
+@media(max-width: 1035px){
+    .container.mobile{
+        right: unset;
+    }
+}
+@media(max-width: 575px){
+
+}

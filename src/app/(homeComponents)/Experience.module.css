@@ -1,0 +1,153 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50svh;
+    color: var(--themeColor);
+    padding: 4em 4em 0 4em;
+    height: max-content;
+}
+.header{
+    font-size: 40px;
+    margin: 0;
+    color: var(--themeColor);
+    text-align: center;
+}
+.resumeContainer{
+    display: flex;
+    width: 100%;
+    /* height: fit-content; */
+}
+.itemContainer{
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.itemWrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+.imageWrapper{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    align-self: flex-start;
+}
+.titleWrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.itemTitle{
+    font-weight: 700;
+    margin-right: 30px;
+    font-size: 20px;
+    color: var(--themeColor);
+}
+.rightWrapper{
+    display: flex;
+    text-align: end;
+}
+.tech{
+    font-weight: 700;
+    color: var(--themeAccent);
+}
+.date{
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--themeColor);
+}
+.toolboxSvg{
+    color: var(--themeColor);
+    fill: var(--themeColor);
+    align-self: flex-start;
+}
+/* .seperatorContainer{
+    height: 100%;
+    padding: 0 15px 0 15px;
+} */
+.topWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.seperator{
+    width: 80%;
+    height: 1px;
+    background-color: var(--divider);
+    margin: 2em 0 2em 0;
+}
+.linksContainer{
+    text-align: center;
+}
+.link{
+    font-size: 16px;
+    color: var(--themeAccentTwo);
+}
+.workedOn{
+    list-style: none;
+    padding-left: 40px;
+    max-width: 90%;
+    padding-top: 20px;
+}
+.listItem{
+    color: var(--themeColorAlt);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.listItem::before{
+    display: inline-block;
+    content: "-";
+    width: 10px;
+    margin-left: -10px;
+}
+@media(max-width: 1035px){
+    .container{
+        padding: 4em 2em 0 2em;
+    }
+    .workedOn{
+        padding: unset;
+        padding-top: 20px;
+    }
+}
+@media(max-width: 675px){
+    .container{
+        padding: 4em 0.75em 0 0.75em;
+    }
+}
+@media(max-width: 475px){
+    .container{
+        padding: 4em 0.5em 0 0.5em;
+    }
+    .titleWrapper{
+        margin-left: 10px;
+    }
+}
+@media(max-width: 375px){
+    .container{
+        padding: 4em 0 0 0;
+    }
+    .itemTitle{
+        font-size: 15px;
+        margin-right: 10px; 
+    }
+    .link{
+        font-size: 12px;
+    }
+    .listItem{
+        font-size: 13px;
+    }
+    .imageWrapper{
+        height: 20px;
+        width: 20px;
+    }
+    .date{
+        font-size: 13px;
+    }
+}

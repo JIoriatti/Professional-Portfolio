@@ -1,0 +1,86 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+}
+.link{
+    width: max-content;
+}
+.deploy,.source{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    background-color: var(--themeAccent);
+    border-radius: 3px;
+    cursor: pointer;
+    color: var(--contactColor);
+    font-weight: 600;
+    letter-spacing: 5px;
+
+    transition: 0.1s ease-in-out;
+    transition-delay: box-shadow 0.1s;
+}
+.deploy:hover,.source:hover{
+    background-color: var(--themeButtonHover);
+    box-shadow: var(--buttonBoxShadowHover);
+    transform: translate(-1px, -1px);
+}
+.deploy:focus-visible,.source:focus-visible{
+    outline: 3px solid var(--themeColor);
+}
+
+@media (max-width: 1556px){
+    .container{
+        height: 40px;
+        padding: 0 20px 0 20px;
+        padding: 0;
+    }
+    .deploy,.source{
+        padding: 6px 10px 6px 10px;
+        font-size: 12px;
+    }
+}
+
+/* mobile */
+@media (max-width: 435px){
+    .container{
+        height: 40px;
+    }
+    .deploy,.source{
+        letter-spacing: 3px;
+    }
+}
+/* mobile-small */
+@media (max-width: 375px){
+    .container{
+        height: 30px;
+    }
+    .deploy,.source{
+        padding: 4px 8px 4px 8px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 345px){
+    .container{
+        flex-direction: column;
+        height: max-content;
+        height: 60px;
+    }
+    .deploy,.source{
+        width: 120px;
+    }
+}
+/* ultra-minuscule screens, looking at you Galaxy Fold */
+@media (max-width: 280px){
+    .container{
+        height: 55px;
+    }
+    /* .deploy,.source{
+        padding: 2px 4px 2px 4px;
+        font-size: 8px;
+    } */
+}

@@ -1,95 +1,64 @@
-import Image from 'next/image'
+import Link from 'next/link'
 import styles from './page.module.css'
+import { League_Spartan, Cinzel_Decorative } from 'next/font/google'
+import LearnMore from './(homeComponents)/LearnMore'
+import Experience from './(homeComponents)/Experience'
+import About from './(homeComponents)/About'
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+//Aria font
+const league = League_Spartan({ subsets: ['latin'], weight:['800', '900'] })
+//DeckBuilder font
+const yuji = Cinzel_Decorative({subsets: ['latin'], weight: ['400','700','900']})
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+export default function HomePage(){
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    return (
+            <main className={styles.main}>
+                <div 
+                    className={styles.container}
+                    id='container'
+                >
+                    <div className={styles.introWrapper}>
+                        <div className={styles.intro}>
+                            Hey there, <br></br>{`I'm `}
+                            <h1 className={styles.name}>
+                                {`James Ioriatti.`}
+                            </h1>
+                            <br></br>
+                            {`I build applications for the web.`}
+                            <br></br>
+                        </div>
+                        <div className={styles.subHeaderWrapper}>
+                            <p className={styles.subHeader}>
+                                Full Stack Web Developer.
+                            </p>
+                            <Link
+                                href={'/projects'}
+                                style={{
+                                    all: 'unset'
+                                }}
+                            >
+                                <span className={styles.checkOut}>Check out my work.</span>
+                            </Link>
+                        </div>
+                        <LearnMore />
+                    </div>
+                    <Experience />
+                    <About />
+                    <Link
+                        href={'/projects'}
+                        style={{
+                            all: 'unset',
+                            alignSelf: 'center',
+                            marginTop: '3em'
+                        }}
+                    >
+                        <span 
+                            className={styles.checkOut}>Check out my work.</span>
+                    </Link>
+                </div>
+            </main>
+    )
 }

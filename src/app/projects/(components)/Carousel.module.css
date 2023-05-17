@@ -1,0 +1,76 @@
+
+.wrapper{
+    position: relative;
+    height: max-content;
+    width: 100%;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    position: relative;
+    height: max-content;
+    width: 100%;
+    overflow: hidden;
+}
+.track{
+    display: flex;
+    position: absolute;
+    top: 0;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+    /* max-width: 10000px; */
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    flex-grow: 1;
+}
+
+.image{
+    max-height: 100%;
+    object-fit: cover;
+}
+.right,.left{
+    display: flex;
+    height: 50px;
+    width: 40px;
+    position: absolute;
+    top: calc(50% - 25px);
+    background-color: var(--themeBg);
+}
+/* -1px to make sure 1px gap doesnt render on some browsers */
+.left{
+    left: -1px;
+}
+.right{
+    right: -1px;
+}
+@media(max-width: 1556px){
+    .track{
+        height: 100%;
+    }
+    .wrapper,.container,.track,.item,.image{
+        width: unset;
+        height: 100%;
+    }
+    .image{
+        object-fit: cover;
+        object-position: left bottom
+    }
+}
+/* @media (max-width: 575px){
+    .track{
+        height: 100%;
+    }
+    .wrapper,.container,.track,.item,.image{
+        width: unset;
+        height: 100%;
+    }
+    .image{
+        object-fit: cover;
+        object-position: left bottom
+    }
+  } */
