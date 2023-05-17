@@ -56,13 +56,11 @@ export default function Hero({images, project}){
     useEffect(()=>{
         heroRef.current.onload = function(){
             setIsLoading(false);
-            console.log('loaded')
         }
     },[])
     useEffect(()=>{
         if(!isLoading){
             controls.start('visible')
-            console.log('useEffect 2 running')
         }
     },[isLoading])
 
@@ -114,7 +112,8 @@ export default function Hero({images, project}){
                                 setCurrentImage(images[0].src);
                                 setIndex(0);
                             }
-                            controls.start('visible')
+                            // controls.start('visible')
+                            setIsLoading(true);
                         }}
                     >
                     </motion.img>
