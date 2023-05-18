@@ -14,7 +14,7 @@ const VARIANTS = {
 }
 
 export default function Hero({images, project}){
-    const [currentImage, setCurrentImage] = useState(images[1].src);
+    const [currentImage, setCurrentImage] = useState(null);
     const [index, setIndex] = useState(1);
     const [runAnimation, setRunAnimation] = useState(false)
     const controls = useAnimationControls();
@@ -54,9 +54,9 @@ export default function Hero({images, project}){
         controls.start('visible')
     }
 
-    // useEffect(()=>{
-    //     controls.start('visible')
-    // },[])
+    useEffect(()=>{
+        setCurrentImage(images[1].src);
+    },[])
 
     return (
         <div 
