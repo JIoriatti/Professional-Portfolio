@@ -54,9 +54,9 @@ export default function Hero({images, project}){
         controls.start('visible')
     }
 
-    // useEffect(()=>{
-    //     controls.start('visible')
-    // },[])
+    useEffect(()=>{
+        heroRef.current.onload = onLoad();
+    },[])
 
     return (
         <div 
@@ -80,7 +80,7 @@ export default function Hero({images, project}){
                     <Icons project={project} />
                     <div className={styles.shadow}></div>
                     <motion.img
-                        // ref={heroRef}
+                        ref={heroRef}
                         onLoad={onLoad}
                         className={styles.heroImage}
                         style={{
