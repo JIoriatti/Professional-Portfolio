@@ -64,7 +64,7 @@ export default function Experience(){
                             <p className={styles.date}>April, 2023</p>
                             <ul className={styles.workedOn}>
                                 <li className={styles.listItem}>
-                                    Learned technologies such as <span className={styles.tech}>React</span>, <span className={styles.tech}>Node.js</span>, <span className={styles.tech}>MySQL</span>, and <span className={styles.tech}>MongoDb</span> to develop full-stack applications through a rigerous 24-week program.
+                                    Learned technologies such as <span className={styles.tech}>React</span>, <span className={styles.tech}>Node.js</span>, <span className={styles.tech}>MySQL</span>, and <span className={styles.tech}>MongoDb</span> to develop full-stack applications through a rigorous 24-week program.
                                 </li>
                                 <li className={styles.listItem}>
                                     Worked with the <a className={styles.link} href='https://console.cloud.google.com/apis'  target='_blank'>Google Developer Cloud Platform</a> to integrate <a className={styles.link} href='https://developers.google.com/maps' target='_blank'>Google Maps API </a> and <a className={styles.link} href='https://developers.google.com/identity/gsi/web/guides/display-google-one-tap' target='_blank'>Google One-Tap</a> sign-in features into a charity-event-hosting application on a team of four over the course of twelve days.
