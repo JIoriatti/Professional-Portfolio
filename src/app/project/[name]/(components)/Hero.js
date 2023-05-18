@@ -54,9 +54,9 @@ export default function Hero({images, project}){
         controls.start('visible')
     }
 
-    useEffect(()=>{
-        controls.start('visible')
-    },[])
+    // useEffect(()=>{
+    //     controls.start('visible')
+    // },[])
 
     return (
         <div 
