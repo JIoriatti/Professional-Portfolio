@@ -7,12 +7,6 @@ import Icons from './Icons'
 const VARIANTS = {
     visible: {
         opacity: 0.8,
-        transition :{
-            duration: 5,
-            repeat: 1,
-            repeatType: 'reverse',
-            delay: 0.2
-        }
     },
     hidden: {
         opacity: 0
@@ -25,6 +19,7 @@ export default function Hero({images, project}){
     const [runAnimation, setRunAnimation] = useState(false)
     const controls = useAnimationControls();
     const [media, setMedia] = useState({})
+    const heroRef = useRef();
     
     //setting arbitrary large init value to keep page hero from loading
     //in at 0
@@ -57,7 +52,7 @@ export default function Hero({images, project}){
 
     useEffect(()=>{
         controls.start('visible')
-    },[])
+    },[currentImage])
 
     return (
         <div 
@@ -80,7 +75,8 @@ export default function Hero({images, project}){
                     </h1>
                     <Icons project={project} />
                     <div className={styles.shadow}></div>
-                    <motion.img 
+                    <motion.img
+                        ref={heroRef}
                         className={styles.heroImage}
                         style={{
                             height : !media.matches ? `${screenHeight}px` : `${(9/16)* screenWidth}px`,
@@ -91,6 +87,11 @@ export default function Hero({images, project}){
                         initial='hidden'
                         animate={controls}
                         variants={VARIANTS}
+                        transition={{
+                            duration: 5,
+                            repeat: 1,
+                            repeatType: 'reverse'
+                        }}
                         onAnimationComplete={()=>{
                             if(index < images.length - 1){
                                 setCurrentImage(images[index + 1].src)
@@ -100,7 +101,6 @@ export default function Hero({images, project}){
                                 setCurrentImage(images[0].src);
                                 setIndex(0);
                             }
-                            controls.start('visible')
                         }}
                     >
                     </motion.img>
