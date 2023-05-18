@@ -54,9 +54,9 @@ export default function Hero({images, project}){
         controls.start('visible')
     }
 
-    useEffect(()=>{
-        heroRef.current.onload = onLoad();
-    },[])
+    // useEffect(()=>{
+    //     heroRef.current.onload = onLoad();
+    // },[])
 
     return (
         <div 
