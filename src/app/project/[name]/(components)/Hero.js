@@ -6,7 +6,13 @@ import Icons from './Icons'
 
 const VARIANTS = {
     visible: {
-        opacity: 0.8
+        opacity: 0.8,
+        transition :{
+            duration: 5,
+            repeat: 1,
+            repeatType: 'reverse',
+            delay: 0.2
+        }
     },
     hidden: {
         opacity: 0
@@ -74,7 +80,6 @@ export default function Hero({images, project}){
                     </h1>
                     <Icons project={project} />
                     <div className={styles.shadow}></div>
-                    {/* <img className={styles.placeholder + ' hidden'} src={images[0].src} alt="placeholder" /> */}
                     <motion.img 
                         className={styles.heroImage}
                         style={{
@@ -86,11 +91,6 @@ export default function Hero({images, project}){
                         initial='hidden'
                         animate={controls}
                         variants={VARIANTS}
-                        transition={{
-                            duration: 5,
-                            repeat: 1,
-                            repeatType: 'reverse',
-                        }}
                         onAnimationComplete={()=>{
                             if(index < images.length - 1){
                                 setCurrentImage(images[index + 1].src)
