@@ -50,13 +50,15 @@ export default function Hero({images, project}){
         return () => window.removeEventListener('resize', trackScreenSize)
     },[])
 
-    const onLoad =()=>{
-        controls.start('visible')
-    }
-
-    // useEffect(()=>{
-    //     heroRef.current.onload = onLoad();
-    // },[])
+    
+    useEffect(()=>{
+        const onLoad =()=>{
+            controls.start('visible')
+            console.log('running')
+        }
+        console.log('use Effect triggered')
+        heroRef.current.onload = onLoad();
+    },[currentImage])
 
     return (
         <div 
@@ -81,7 +83,7 @@ export default function Hero({images, project}){
                     <div className={styles.shadow}></div>
                     <motion.img
                         ref={heroRef}
-                        onLoad={onLoad}
+                        // onLoad={onLoad}
                         className={styles.heroImage}
                         style={{
                             height : !media.matches ? `${screenHeight}px` : `${(9/16)* screenWidth}px`,
