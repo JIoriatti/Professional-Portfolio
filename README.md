@@ -2,7 +2,7 @@
 
 ## Web Development Portfolio
 
-Check it out live: [j-ior.com](https://j-ior.com/)
+Check it out live: [`j-ior.com`](https://j-ior.com/)
 
 This is my professional web development portfolio that was developed with [Next.js](https://nextjs.org/).
 
