@@ -101,10 +101,10 @@ export default function Experience(){
                                     </p>
                                 </div>
                             </div>
-                            <p className={styles.date}>May, 2018</p>
+                            <p className={styles.date}>May, 2019</p>
                             <ul className={styles.workedOn}>
                                 <li className={styles.listItem}>
-                                    <a className={styles.link} href='https://www.cfainstitute.org/' target='_blank'>CFA</a> level II candidate. Passed CFA Level I Exam December, 2018.
+                                    <a className={styles.link} href='https://www.cfainstitute.org/' target='_blank'>CFA</a> level II candidate. Passed CFA Level I Exam December, 2019.
                                 </li>
                             </ul>
                         </div>
