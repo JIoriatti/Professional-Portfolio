@@ -76,7 +76,7 @@ export default function Experience(){
                                 <li 
                                     className={styles.listItem}
                                 >
-                                    Utilized <a className={styles.link} href='https://www.rainforestapi.com/' target='_blank'>Rainforest API</a>, an Amazon products API, to develop search functionality and product display pages for a perfume e-commerce website where users could search for fragrences based on their preffered scents. The application was developed on a team of four over the course of twelve days.
+                                    Utilized <a className={styles.link} href='https://www.rainforestapi.com/' target='_blank'>Rainforest API</a>, an Amazon products API, to develop search functionality and product display pages for a perfume e-commerce website where users could search for fragrances based on their preferred scents. The application was developed on a team of four over the course of twelve days.
                                 </li>
                             </ul>
                         </div>
